@@ -1,7 +1,10 @@
 /// A CAN identifier, in either the 11-bit standard format or the 29-bit extended format.
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
 pub enum CanId {
+    /// 11-bit identifier
     Standard(u16),
+
+    /// 29-bit identifier
     Extended(u32),
 }
 
