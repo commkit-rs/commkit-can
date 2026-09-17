@@ -2,6 +2,13 @@
 name = "commkit-can"
 version = "0.1.0"
 edition = "2024"
+license = "MIT"
+description = "Controller Area Network (CAN) implementation for commkit"
+repository = "https://github.com/commkit-rs/commkit-can"
+readme = "README.md"
+authors = ["Nick Daria <contact@nickdaria.com>"]
+categories = ["embedded", "no-std", "hardware-support"]
+keywords = ["can", "can-bus", "automotive", "embedded", "no-std"]
 
 [dependencies]
-commkit = { path = "../commkit" }
+commkit = { path = "../commkit", version = "0.1.0" }
