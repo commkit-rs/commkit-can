@@ -1,4 +1,4 @@
-use commkit::{ByteTransfer, Packet};
+use commkit::{ByteTransfer, Direction, Packet};
 
 use crate::id::CanId;
 
@@ -41,6 +41,10 @@ impl CanFrame {
 }
 
 impl ByteTransfer for CanFrame {
+    fn new(_direction: Direction, bytes: &[u8]) -> Self {
+        Self::new(CanId::Standard(0), false, false, false, bytes)
+    }
+
     fn as_bytes(&self) -> &[u8] {
         self.data()
     }
